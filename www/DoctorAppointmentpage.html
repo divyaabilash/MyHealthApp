@@ -1,0 +1,42 @@
+<!Doctype html>
+<head>
+<link rel="stylesheet" href="lib/ionic/css/ionic.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<title>My Health</title>
+</head>
+<body>
+ <div class="bar bar-header bar-positive padding"> 
+  <h1 class="title">My Health</h1>
+     </div>
+     <div class="card topfix">
+     <div class="item item-text-wrap">
+    <ion-content ng-controller="AppCtrl" class="padding">
+      <h4 class="padding"> 
+        welcome {{name}}, to My Health App.
+      </h4>
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Doctor Name</span>
+    <input type="text" placeholder="John">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Appointment Date</span>
+    <input type="datetime-local" placeholder="05-31-2014">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Location</span>
+    <input type="text" placeholder="1234 applect">
+  </label>
+</div>
+
+      <button class="button button-positive button-block">
+        Submit
+      </button>
+      
+    </ion-content>
+</div>
+     </div>
+
+</body>
+
+</html>
