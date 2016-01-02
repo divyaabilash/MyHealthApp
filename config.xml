@@ -7,7 +7,8 @@
   <author email="divyarajalakshmin@gmail.com" href="http://gmail.com/">
       Divyarajalakshmi Natarajan
     </author>
-  <content src="DoctorAppointmentpage.html"/>
+  <!-- <content src="DoctorAppointmentpage.html"/> -->
+  <content src="caller-list.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
