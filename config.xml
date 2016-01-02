@@ -8,7 +8,7 @@
       Divyarajalakshmi Natarajan
     </author>
 <!--    <content src="DoctorAppointmentpage.html"/> -->
- <content src="caller-list.html"/>
+ <content src="contact-list.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>

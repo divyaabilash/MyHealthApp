@@ -1,22 +1,24 @@
-angular.module("app",['ionic'])
-.controller('AppCtrl',function($scope){
+var app = angular.module("app",['ionic']);
+
+app.controller('AppCtrl',function($scope){
 //	$scope.data={};
 	$scope.name="Allan"
 });
-var doctorDetails =({
+
+
+app.controller('Caller',function($scope){
+	var doctorDetails =[{
 		name:"hello",
 		phonenumber:123
 	},
 	{
 		name:"hello1",
 		phonenumber:1234
-	});
-angular.module("app1",['ionic'])
-.controller('Caller',function($scope){
+	}];
 //	$scope.data={};
-	$scope.doc= doctorDetails;
+	$scope.doc = doctorDetails;
 });
 
 
-angular.bootstrap(document, ['app','app1']);
+angular.bootstrap(document, ['app']);
 //angular.bootstrap(document, ['callcontact']);
