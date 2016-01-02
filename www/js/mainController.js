@@ -20,16 +20,15 @@ app.controller('Caller',function($scope){
 });
 
 app.controller('medicinelist',function($scope){
-var drug = [
-{
+$scope.drug = [{
 	name: "tylenol",
 	dosage:1
 },
 {
 	name:"Acetaminophen",
 	dosage:2
-}
 }];
+
 });
 
 // .config(function ContentController($scope, $ionicSideMenuDelegate) {

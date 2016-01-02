@@ -1,63 +1,48 @@
 <!Doctype html>
 <head>
 <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">   
-<title>My Health</title>
-<link rel="stylesheet" href="lib/ionic/css/ionic.css"/>
-<link rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>My Health</title>
+<link rel="stylesheet" href="lib/ionic/css/ionic.css">
+<link rel="stylesheet" href="css/style.css">
    <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-<!--   This  will download and add angular-local-storage to our app libraries 
+    <!--   This  will download and add angular-local-storage to our app libraries 
  <script src="lib/angular-local-storage/dist/angular-local-storage.js"></script> -->
-
 </head>
-<!-- <body ng-app="app"> -->
 <body>
 <ion-pade>
-
-<ion-header-bar class="bar bar-header bar-positive padding"> 
+<ion-header-bar class="bar  bar-header bar-positive">
 <h1 class="title">My Health</h1>
 </ion-header-bar>
-<ion-content ng-controller="AppCtrl" class="padding">
-<!--<div class="wrapper"> -->
+<ion-header-bar class="bar bar-subheader bar-stable">
+<h1 class="title"> Medicines</h1>
+</ion-header-bar>
+<ion-content ng-controller="medicinelist" class="padding">
+<div class="card">
+  <div class="container">
+    <div class="list">
+      <div class="item item-avatar" ng-repeat="drugs in drug">
+        <div class="item item-button-right">
+          <h2>{{drugs.name}}</h2>
+          <p>count: {{drugs.dosage}}</p>
 
-     <div class="card">
-     <div class="item item-text-wrap">
-    
-      <h4 class="padding"> 
-        welcome {{name}}, to My Health App.
-      </h4>
-<div class="list">
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Doctor Name</span>
-    <input type="text" placeholder="John">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Appointment Date</span>
-    <input type="datetime-local" placeholder="05-31-2014">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Location</span>
-    <input type="text" placeholder="1234 applect">
-  </label>
-    <label class="item item-input item-stacked-label">
-    <span class="input-label">Description</span>
-    <input type="text" placeholder="general appointment">
-  </label>
-</div>
-
-      <button class="button button-positive button-block">
-        Submit
-      </button>
+          <button class="button button-light">
+            <i class="icon">
+            <img src="img/pill.png" width="50px">
+            </i>
+          </button>
+        </div>
       </div>
-     </div>
+    </div>
+  </div>
+</div>
 </ion-content>
-<ion-footer-bar class="bar bar-footer bar-positive">
-  <h6 class="title" >sparrow Mobiles</h6>
+<ion-footer-bar class="bar bar-footer bar-stable">
+<h2 class="title">Sparrow Mobiles</h2>
 </ion-footer-bar>
 </ion-pade>
 <script src="lib/ionic/js/ionic.bundle.js"></script>
 <script src="js/mainController.js"></script>
 </body>
-
 </html>
