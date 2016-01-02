@@ -1,5 +1,8 @@
 /* Empty. Add your own CSS if you like */
 
-.topfix {
-	margin-top: 60px;
+.wrapper {
+	margin-top: 44px;
+}
+.moremargin {
+	margin-top:80px;
 }

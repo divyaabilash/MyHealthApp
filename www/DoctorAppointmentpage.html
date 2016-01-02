@@ -4,13 +4,19 @@
 <link rel="stylesheet" href="css/style.css"/>
 <title>My Health</title>
 </head>
+<!-- <body ng-app="app"> -->
 <body>
- <div class="bar bar-header bar-positive padding"> 
-  <h1 class="title">My Health</h1>
-     </div>
-     <div class="card topfix">
+<ion-pade>
+
+<ion-header-bar class="bar bar-header bar-positive padding"> 
+<h1 class="title">My Health</h1>
+</ion-header-bar>
+<ion-content ng-controller="AppCtrl" class="padding">
+<!--<div class="wrapper"> -->
+
+     <div class="card">
      <div class="item item-text-wrap">
-    <ion-content ng-controller="AppCtrl" class="padding">
+    
       <h4 class="padding"> 
         welcome {{name}}, to My Health App.
       </h4>
@@ -36,11 +42,15 @@
       <button class="button button-positive button-block">
         Submit
       </button>
-      
-    </ion-content>
-</div>
+      </div>
      </div>
-
+</ion-content>
+<ion-footer-bar class="bar bar-footer bar-positive">
+  <h6 class="title" >sparrow Mobiles</h6>
+</ion-footer-bar>
+</ion-pade>
+<script src="lib/ionic/js/ionic.bundle.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>
