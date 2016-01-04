@@ -13,10 +13,13 @@
 <body>
 <ion-pade>
 <ion-header-bar class="bar  bar-header bar-positive">
+<button class="button ion-navicon"></button>
 <h1 class="title">My Health</h1>
 </ion-header-bar>
 <ion-header-bar class="bar bar-subheader bar-stable">
+
 <h1 class="title"> Medicines</h1>
+<button class="button ion-plus button-positive"></button>
 </ion-header-bar>
 <ion-content ng-controller="medicinelist" class="padding">
 <div class="card">
@@ -25,8 +28,7 @@
       <div class="item item-avatar" ng-repeat="drugs in drug">
         <div class="item item-button-right">
           <h2>{{drugs.name}}</h2>
-          <p>count: {{drugs.dosage}}</p>
-
+          <p>Dosage: {{drugs.dosage}}</p>
           <button class="button button-light">
             <i class="icon">
             <img src="img/pill.png" width="50px">
