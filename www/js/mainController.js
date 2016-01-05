@@ -2,7 +2,30 @@ var app = angular.module("app",['ionic']);
 
 app.controller('AppCtrl',function($scope){
 //	$scope.data={};
-	$scope.name="Allan"
+	var called =({
+		number:4087234581,
+		name:"Doctor Mark "
+	});
+	var medicine=({
+		name: "tylenol",
+		dosage:1,
+		time:"02:30 pm"
+	});
+	var appointment=({
+		 docName:"Doctor 2",
+         hospitalName:"hospital 2",
+         location:"1567 newhear locaton sanjose ca 95145",
+         date:"05-03-2016",
+         time:"5:30 am",
+         description:"issue 2.",
+         patientName:"patient 2"
+	});
+
+	$scope.name="Allan",
+	$scope.recentcaller=called,
+	$scope.upcomingmedicine=medicine,
+	$scope.upcomingappointment=appointment
+
 });
 
 
