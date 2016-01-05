@@ -3,6 +3,9 @@
 .wrapper {
 	margin-top:90px;
 }
+.top{
+  margin-top:10px;
+}
 
 .toggle-btn-group {
 	border: 1px solid #ccc;
@@ -34,6 +37,14 @@
 .toggle-btn-group input[type="checkbox"]:checked+label {
   background-color: #b2b2b2;
 }
+
+p.biggerfont {
+  font-size:27px;
+}
+p.bigfont{
+  font-size:20px;
+}
+
 /*
 .toggle-btn-group input[type="checkbox"]:focus+label {
   outline: 2px #999 dotted;

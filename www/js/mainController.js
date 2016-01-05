@@ -31,13 +31,40 @@ $scope.drug = [{
 
 });
 
+app.controller('appointmentcontroller',function($scope){
+	$scope.appointments=[{	
+         docName:"Doctor 1",
+         hospitalName:"hospital 1",
+         location:"location 1",
+         date:"date1",
+         time:"time",
+         description:"issue 1.",
+         patientName:"patient 1"
+       },
+       {
+       	 docName:"Doctor 2",
+         hospitalName:"hospital 2",
+         location:"1567 newhear locaton sanjose ca 95145",
+         date:"05-03-2016",
+         time:"5:30 am",
+         description:"issue 2.",
+         patientName:"patient 2"
+       },
+       {
+       	 docName:"Doctor 3",
+         hospitalName:"hospital 3 location 3 location 3 location 3 location 3 location 3location 3",
+         location:"location 3",
+         date:"date3",
+         time:"12:00 am",
+         description:"issue 3.",
+         patientName:"patient 3"
+      }];
+});
+
 // .config(function ContentController($scope, $ionicSideMenuDelegate) {
 //   $scope.toggleLeft = function() {
 //     $ionicSideMenuDelegate.toggleLeft();
 //   };
 // });
-
-
-
 angular.bootstrap(document, ['app']);
-//angular.bootstrap(document, ['callcontact']);
+//angular.bootstrap(document, [callcontact]);

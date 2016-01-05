@@ -17,30 +17,30 @@
   <h1 class="title">My Health</h1>
 </ion-header-bar>
 <ion-header-bar class="bar bar-stable bar-subheader">
- <button class="button button-positive">Cancel</button>
-  <h2 class="title"> New Contact </h2>
- <button class="button button-positive">Save</button>
+  <h2 class="title"> Appointments </h2>
+ <button class="button ion-plus button-positive"></button>
 </ion-header-bar> 
 <ion-content ng-controller="appointmentcontroller" class="padding">
 <div class="card" >
+<div class="container">
 <div class="list">
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Contact Name</span>
-    <input type="text" placeholder="John">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Contact Number</span>
-    <input type="datetime-local" placeholder="xxx-xxx-xxxx">
-  </label>
-    <label class="item item-input item-stacked-label">
-    <span class="input-label">Key Word</span>
-    <input type="text" placeholder="Doctor">
-    </label>  
+<div class="item top" ng-repeat="apt in appointments">
+  <div class="row item-text-wrap">
+  <div class="col item-text-wrap" style="float:left">
+   <p>{{apt.docName}}</p>
+   <p> {{apt.hospitalName}}</p>
+    <p>{{apt.location}}</p>
+   <p>{{apt.description}}</p>
+   </div>
+   <div class="col" style="text-align:center float:right" >
+<p class="bigfont">{{apt.date}}</p>
+<p class="biggerfont top">{{apt.time}}</p>
+   </div>
+   </div>
+ </div>
+ </div>       
 </div>
-    <button class="button button-positive button-block">
-        Save
-      </button>
-      </div>
+</div>
 </ion-content>
 <ion-footer-bar class="bar bar-footer bar-stable">
   <h6>Sparrow Mobiles</h6>
