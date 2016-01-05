@@ -25,19 +25,21 @@
 <div class="card">
   <div class="container">
     <div class="list">
-      <div class="item item-avatar" ng-repeat="drugs in drug">
-        <div class="item item-button-right">
-          <h2>{{drugs.name}}</h2>
-          <p>Dosage: {{drugs.dosage}}</p>
-          <button class="button button-light">
-            <i class="icon">
-            <img src="img/pill.png" width="50px">
-            </i>
-          </button>
+      <div class="item" ng-repeat="drugs in drug">
+        <div class="row">
+        <div class="col">
+         <img src="img/pill.png" width="50px">
+         </div>
+         <div class="col col-60">
+          <p class="bigfont">{{drugs.name}}</p>
+          </div>
+          <div class="col">
+          <p class="biggestfont padding"> {{drugs.dosage}}</p>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 </ion-content>
 <ion-footer-bar class="bar bar-footer bar-stable">
