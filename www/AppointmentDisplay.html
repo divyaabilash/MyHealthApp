@@ -24,9 +24,9 @@
 <div class="card" >
 <div class="container">
 <div class="list">
-<div class="item top" ng-repeat="apt in appointments">
+<div class="item top" ng-repeat="apt in appointments | orderBy:'date' :true">
   <div class="row item-text-wrap">
-  <div class="col item-text-wrap" style="float:left">
+  <div class="col item-text-wrap" style="float:left" ng-model="apt">
    <p>{{apt.docName}}</p>
    <p> {{apt.hospitalName}}</p>
     <p>{{apt.location}}</p>
@@ -47,6 +47,6 @@
 </ion-footer-bar>
 </ion-pade>
 <script src="lib/ionic/js/ionic.bundle.js"></script>
-<script src="js/mainController.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

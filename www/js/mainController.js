@@ -59,7 +59,7 @@ app.controller('appointmentcontroller',function($scope){
          docName:"Doctor 1",
          hospitalName:"hospital 1",
          location:"location 1",
-         date:"date1",
+         date:"01-05-2016",
          time:"time",
          description:"issue 1.",
          patientName:"patient 1"
@@ -77,7 +77,7 @@ app.controller('appointmentcontroller',function($scope){
        	 docName:"Doctor 3",
          hospitalName:"hospital 3 location 3 location 3 location 3 location 3 location 3location 3",
          location:"location 3",
-         date:"date3",
+         date:"01-01-2016",
          time:"12:00 am",
          description:"issue 3.",
          patientName:"patient 3"
