@@ -80,7 +80,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('appointments.add', {
         url: '/add',
         templateUrl: 'templates/add-appointments.html',
-        controller: 'AppointmntsCtrl'
+        controller: 'AppointmentsCtrl'
     })
 
     .state('contacts', {

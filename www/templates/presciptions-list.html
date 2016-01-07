@@ -1,13 +1,17 @@
-<ion-content class="padding">
+<ion-header-bar class="bar bar-stable bar-subheader">
+    <h2 class="title"> Medicine </h2>
+    <button class="button ion-plus button-positive" ui-sref="^.add"></button>
+</ion-header-bar>
+<ion-content class="padding topmargin">
     <div class="card">
         <div class="container">
             <div class="list">
                 <div class="item" ng-repeat="drugs in prescriptionInfo">
                     <div class="row">
-                        <div class="col">
+                        <div class="col col-20">
                             <img src="img/pill.png" width="50px">
                         </div>
-                        <div class="col col-60">
+                        <div class="col col-58 item-text-wrap">
                             <p class="bigfont">{{drugs.name}}</p>
                         </div>
                         <div class="col">

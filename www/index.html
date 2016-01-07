@@ -22,7 +22,7 @@
 <body ng-app="app" ng-controller="sidemenu">
     <ion-pade>
         <ion-header-bar class="bar  bar-header bar-positive">
-            <button class="button ion-navicon" ng-click="toggleLeft()"></button>
+            <button class="button button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
              <h1 class="title">My Health</h1>
         </ion-header-bar>
         <!--
@@ -33,16 +33,16 @@
         <ion-side-menus>
             <ion-side-menu side="left">
                 <ion-list>
-                    <ion-item style="margin-top:100px" ui-sref="dashboard"> Home</ion-item>
+                    <ion-item menu-close style="margin-top:100px" ui-sref="dashboard"> Home</ion-item>
                 </ion-list>
                 <ion-list>
-                    <ion-item ui-sref="contacts.list">Contents</ion-item>
+                    <ion-item menu-close ui-sref="contacts.list">Contents</ion-item>
                 </ion-list>
                 <ion-list>
-                    <ion-item ui-sref="presciptions.list">Medicines</ion-item>
+                    <ion-item menu-close ui-sref="presciptions.list">Medicines</ion-item>
                 </ion-list>
                 <ion-list>
-                    <ion-item ui-sref="appointments.list">Appointments</ion-item>
+                    <ion-item menu-close ui-sref="appointments.list">Appointments</ion-item>
                 </ion-list>
             </ion-side-menu>
             <ion-side-menu-content>
