@@ -3,16 +3,16 @@
         <div class="container">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="Phonenumber">
+                    <input type="number" placeholder="Phonenumber" ng-model="login.phone">
                 </label>
                 <label class="item item-input">
-                    <input type="text" placeholder="PIN">
+                    <input type="text" placeholder="PIN" ng-model="login.pin">
                 </label>
             </div>
         </div>
     </div>
     <div class="padding" style="margin-top:20px">
-        <button class="button button-positive button-block" style="margin-top:50px">
+        <button class="button button-positive button-block" style="margin-top:50px" ng-click="loginDo(login)">
             Login
         </button>
     </div>

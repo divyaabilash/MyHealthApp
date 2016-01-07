@@ -1,5 +1,4 @@
 <!Doctype html>
-<html ng-app="app">
 <head>
 <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -18,30 +17,25 @@
   <h1 class="title">My Health</h1>
 </ion-header-bar>
 <ion-header-bar class="bar bar-stable bar-subheader">
- <button class="button button-positive">Cancel</button>
-  <h2 class="title"> New Contact </h2>
- <button class="button button-positive">Save</button>
+  <h2 class="title"> Contacts</h2>
+ <button class="button ion-plus button-positive"></button>
 </ion-header-bar> 
-<ion-content  ng-controller="AppCtrl" class="padding">
+<ion-content ng-controller="Caller" class="padding">
 <div class="card" >
+<div class="container">
 <div class="list">
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Contact Name</span>
-    <input ng-model="name" type="text" placeholder="John">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Contact Number</span>
-    <input ng-model="phonenumber" type="datetime-local" placeholder="xxx-xxx-xxxx">
-  </label>
-    <label class="item item-input item-stacked-label">
-    <span class="input-label">Key Word</span>
-    <input ng-model="keyword" type="text" placeholder="Doctor">
-    </label>  
+<div class="item item-avatar" ng-repeat="doctor in doc">
+  <div class="item item-button-right">
+   <h4>{{doctor.name}}</h4>
+      <p>{{doctor.phonenumber}}</p> 
+      <button class="button button-positive">
+            <i class="icon ion-ios-telephone"></i>
+            </button>
+             </div>
+ </div>
+ </div>       
 </div>
-    <button class="button button-positive button-block">
-        Save
-      </button>
-      </div>
+</div>
 </ion-content>
 <ion-footer-bar class="bar bar-footer bar-stable">
   <h6>Sparrow Mobiles</h6>

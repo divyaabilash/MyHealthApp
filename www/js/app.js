@@ -1,124 +1,137 @@
-// var app = angular.module('MyHealthApp', ['ionic', 'LocalStorageModule']);
-// app.config(function (localStorageServiceProvider) {
-//     localStorageServiceProvider
-//       .setPrefix('MyHealthApp');
-//   });
+var app = angular.module("app", ['ionic', 'LocalStorageModule', 'app.controllers', 'app.services', 'app.config']);
 
-var app = angular.module("app",['ionic']);
-
-// app.config(function($stateProvider,$urlRouteProvider){
-// $stateProvider
-// .state('page1',{
-//   url:"/page1",
-//   templateUrl:'homepage.html'
-//   controller:'AppCtrl',  
-// })
-// });
+app.config(function(localStorageServiceProvider) {
+    localStorageServiceProvider
+        .setPrefix('MyHeathApp');
+});
 app.controller('sidemenu',function($scope,$ionicSideMenuDelegate){
 $scope.toggleLeft = function(){
-  $ionicSideMenuDelegate.toggleLeft()
+  $ionicSideMenuDelegate.toggleLeft();
 }
 });
 
-app.controller('login',function(){
+//Ionic default code
+app.run(function($ionicPlatform) {
+    $ionicPlatform.ready(function() {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            cordova.plugins.Keyboard.disableScroll(true);
 
-});
-app.controller('AppCtrl',function($scope){
-//	$scope.data={};
-	var called =({
-		number:4087234581,
-		name:"Doctor Mark "
-	});
-	var medicine=({
-		name: "tylenol",
-		dosage:1,
-		time:"02:30 pm"
-	});
-	var appointment=({
-		 docName:"Doctor 2",
-         hospitalName:"hospital 2",
-         location:"1567 newhear locaton sanjose ca 95145",
-         date:"05-03-2016",
-         time:"5:30 am",
-         description:"issue 2.",
-         patientName:"patient 2"
-	});
-
-	$scope.name="Allan",
-	$scope.recentcaller=called,
-	$scope.upcomingmedicine=medicine,
-	$scope.upcomingappointment=appointment
-
+        }
+        if (window.StatusBar) {
+            // org.apache.cordova.statusbar required
+            StatusBar.styleDefault();
+        }
+    });
 });
 
+//Place to configure routes for the app.
+app.config(function($stateProvider, $urlRouterProvider) {
 
-app.controller('Caller',function($scope){
-	var doctorDetails =[{
-		name:"hello",
-		phonenumber:123,
-    keyword:"doector"
-	},
-	{
-		name:"hello1",
-		phonenumber:1234
-	}];
-//	$scope.data={};
-	$scope.doc = doctorDetails;
-});
+    // Ionic uses AngularUI Router which uses the concept of states
+    // Learn more here: https://github.com/angular-ui/ui-router
+    // Set up the various states which the app can be in.
+    // Each state's controller can be found in controllers.js
 
-app.controller('medicinelist',function($scope){
-$scope.drug = [{
-	name: "tylenol",
-	dosage:1
-},
-{
-	name:"Acetaminophen",
-	dosage:2
-}];
+    $stateProvider
 
-});
+        .state('login', {
+        url: '/login',
+        templateUrl: 'templates/login.html',
+        controller: 'LoginCtrl'
+    })
 
-app.controller('appointmentcontroller',function($scope){
-	$scope.appointments=[{	
-         docName:"Doctor 1",
-         hospitalName:"hospital 1",
-         location:"location 1",
-         date:"01-05-2016",
-         time:"time",
-         description:"issue 1.",
-         patientName:"patient 1"
-       },
-       {
-       	 docName:"Doctor 2",
-         hospitalName:"hospital 2",
-         location:"1567 newhear locaton sanjose ca 95145",
-         date:"05-03-2016",
-         time:"5:30 am",
-         description:"issue 2.",
-         patientName:"patient 2"
-       },
-       {
-       	 docName:"Doctor 3",
-         hospitalName:"hospital 3 location 3 location 3 location 3 location 3 location 3location 3",
-         location:"location 3",
-         date:"01-01-2016",
-         time:"12:00 am",
-         description:"issue 3.",
-         patientName:"patient 3"
-      }];
+    .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'templates/dashboard.html',
+        controller: 'DashCtrl',
+        resolve: {
+            appointmentInfo: function($rootScope, AppointmentService) {
+                return AppointmentService.getAppointments($rootScope.user.uid);
+            },
+            prescriptionInfo: function($rootScope, PrescriptionService) {
+                return PrescriptionService.getPrescriptions($rootScope.user.uid);
+            },
+            contactInfo: function($rootScope, ContactService) {
+                return ContactService.getContacts($rootScope.user.uid);
+            }
+        }
+    })
+
+    .state('appointments', {
+        url: '/appointments',
+        templateUrl: 'templates/appointments.html',
+        controller: 'AppointmentsCtrl',
+        resolve: {
+            appointmentInfo: function($rootScope, AppointmentService) {
+                return AppointmentService.getAppointments($rootScope.user.uid);
+            }
+        }
+    })
+
+    .state('appointments.list', {
+        url: '/list',
+        templateUrl: 'templates/appointments-list.html',
+        controller: 'AppointmentsCtrl'
+    })
+
+    .state('appointments.add', {
+        url: '/add',
+        templateUrl: 'templates/add-appointments.html',
+        controller: 'AppointmntsCtrl'
+    })
+
+    .state('contacts', {
+        url: '/contacts',
+        templateUrl: 'templates/contacts.html',
+        controller: 'ContactsCtrl',
+        resolve: {
+            contactInfo: function($rootScope, ContactService) {
+                return ContactService.getContacts($rootScope.user.uid);
+            }
+        }
+    })
+
+    .state('contacts.list', {
+        url: '/list',
+        templateUrl: 'templates/contacts-list.html'
+    })
+
+    .state('contacts.add', {
+        url: '/add',
+        templateUrl: 'templates/contacts-add.html'
+    })
+
+    .state('presciptions', {
+            url: '/presciptions',
+            templateUrl: 'templates/presciptions.html',
+            controller: 'PresciptionsCtrl',
+            resolve: {
+
+                prescriptionInfo: function($rootScope, PrescriptionService) {
+                    return PrescriptionService.getPrescriptions($rootScope.user.uid);
+                }
+
+            }
+        })
+        .state('presciptions.list', {
+            url: '/list',
+            templateUrl: 'templates/presciptions-list.html'
+        })
+        .state('presciptions.add', {
+            url: '/add',
+            templateUrl: 'templates/presciptions-add.html'
+        });
+
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/login');
+
 });
 
 function MainCtrl($scope, $ionicSideMenuDelegate) {
   $scope.toggleLeftSideMenu = function() {
-    $ionicSideMenuDelegate.toggleLeft();
+    $ionicSideMenuDelegate.toggleLeft()
   };
 }
-
-
-// .config(function ContentController($scope, $ionicSideMenuDelegate) {
-//   $scope.toggleLeft = function() {
-//     $ionicSideMenuDelegate.toggleLeft();
-//   };
-// });
-//angular.bootstrap(document, ['app']);
-//angular.bootstrap(document, [callcontact]);
