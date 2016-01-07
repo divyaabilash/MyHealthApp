@@ -6,14 +6,23 @@
 
 var app = angular.module("app",['ionic']);
 
-app.config(function($routeProvider){
-$routeProvider
-.when('/ionic-lab',{
-  controller:'AppCtrl',
-  templateUrl:'homepage.html'
-})
+// app.config(function($stateProvider,$urlRouteProvider){
+// $stateProvider
+// .state('page1',{
+//   url:"/page1",
+//   templateUrl:'homepage.html'
+//   controller:'AppCtrl',  
+// })
+// });
+app.controller('sidemenu',function($scope,$ionicSideMenuDelegate){
+$scope.toggleLeft = function(){
+  $ionicSideMenuDelegate.toggleLeft()
+}
 });
 
+app.controller('login',function(){
+
+});
 app.controller('AppCtrl',function($scope){
 //	$scope.data={};
 	var called =({
@@ -46,7 +55,8 @@ app.controller('AppCtrl',function($scope){
 app.controller('Caller',function($scope){
 	var doctorDetails =[{
 		name:"hello",
-		phonenumber:123
+		phonenumber:123,
+    keyword:"doector"
 	},
 	{
 		name:"hello1",
@@ -98,10 +108,17 @@ app.controller('appointmentcontroller',function($scope){
       }];
 });
 
+function MainCtrl($scope, $ionicSideMenuDelegate) {
+  $scope.toggleLeftSideMenu = function() {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
+}
+
+
 // .config(function ContentController($scope, $ionicSideMenuDelegate) {
 //   $scope.toggleLeft = function() {
 //     $ionicSideMenuDelegate.toggleLeft();
 //   };
 // });
-angular.bootstrap(document, ['app']);
+//angular.bootstrap(document, ['app']);
 //angular.bootstrap(document, [callcontact]);

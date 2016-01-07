@@ -1,4 +1,5 @@
 <!Doctype html>
+<html ng-app="app">
 <head>
 <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">   
@@ -32,19 +33,19 @@
 <div class="list">
   <label class="item item-input item-stacked-label">
     <span class="input-label">Doctor Name</span>
-    <input type="text" placeholder="John">
+    <input ng-model="docName" type="text" placeholder="John">
   </label>
   <label class="item item-input item-stacked-label">
     <span class="input-label">Appointment Date</span>
-    <input type="datetime-local" placeholder="05-31-2014">
+    <input ng-model="date" type="datetime-local" placeholder="05-31-2014">
   </label>
   <label class="item item-input item-stacked-label">
     <span class="input-label">Location</span>
-    <input type="text" placeholder="1234 applect">
+    <input ng-model="location" type="text" placeholder="1234 applect">
   </label>
     <label class="item item-input item-stacked-label">
     <span class="input-label">Description</span>
-    <input type="text" placeholder="general appointment">
+    <input ng-model="description" type="text" placeholder="general appointment">
   </label>
 </div>
     <button class="button button-positive button-block">

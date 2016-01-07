@@ -1,0 +1,365 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"s",
+				"script"
+			],
+			[
+				"p",
+				"phonenumber"
+			],
+			[
+				"con",
+				"config"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"app",
+				"appointment"
+			],
+			[
+				"t",
+				"table-cell"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"ion-",
+				"ion-pane"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"Test",
+				"Test2"
+			],
+			[
+				"pr",
+				"printThis"
+			],
+			[
+				"get",
+				"getName"
+			],
+			[
+				"func",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 267.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"raw.githubusercontent.com",
+			"# HTML, CSS, JavaScript and JSON code formatter for Sublime Text 2 and 3 via node.js",
+			" import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/divya/MyHealthApp/www/contact-list.html",
+		"/Users/divya/MyHealthApp/www/newContact.html",
+		"/Users/divya/MyHealthApp/www/js/app.js",
+		"/Users/divya/MyHealthApp/www/new\nMedicinereminder.html",
+		"/Users/divya/MyHealthApp/www/AppointmentDisplay.html",
+		"/Users/divya/MyHealthApp/www/newAppointmentReminder.html",
+		"/Users/divya/MyHealthApp/www/index.html",
+		"/Users/divya/MyHealthApp/www/homepage.html",
+		"/Users/divya/MyHealthApp/www/login.html",
+		"/Users/divya/MyHealthApp/www/lib/ionic/css/ionic.css",
+		"/Users/divya/MyHealthApp/www/js/mainController.js",
+		"/Users/divya/MyHealthApp/www/medicineReminder.html",
+		"/Users/divya/MyHealthApp/www/css/style.css",
+		"/Users/divya/myhealthserver/server/startup/loadApts.js",
+		"/Users/divya/myhealthserver/server/apts.js",
+		"/Users/divya/myhealthserver/model/apts.js",
+		"/Users/divya/tabs/whatsapp/www/templates/chat-detail.html",
+		"/Users/divya/MyHealthApp/www/js/services.js",
+		"/Users/divya/MyHealthApp/www/js/service.js",
+		"/Users/divya/myhealthserver/client/lib/app.js",
+		"/Users/divya/myhealthserver/client/apts/apt-list/apt-list.component.js",
+		"/Users/divya/MyHealthApp/scss/ionic.app.scss",
+		"/Users/divya/MyHealthApp/www/DoctorAppointmentpage.html",
+		"/Users/divya/MyHealthApp/www/medicineList.html",
+		"/Users/divya/MyHealthApp/www/medicineAddition.html",
+		"/Users/divya/MyHealthApp/www/lib/ionic/js/angular-ui/angular-ui-router.js",
+		"/Users/divya/MyHealthApp/www/Medicinereminder.html",
+		"/Users/divya/MyHealthApp/config.xml",
+		"/Users/divya/Downloads/pill.png",
+		"/Users/divya/MyHealthApp/www/lib/ionic/js/ionic.bundle.js",
+		"/Users/divya/MyHealthApp/www/lib/ionic/js/ionic-angular.js",
+		"/Users/divya/MyHealthApp/platforms/ios/build/emulator/MyHealthApp.app/www/caller-list.html",
+		"/Users/divya/MyHealthApp/platforms/ios/www/caller-list.html",
+		"/Users/divya/MyHealthApp/www/lib/ionic/js/app.js",
+		"/Users/divya/MyHealthApp/www/lib/ionic/css/ionic.min.css",
+		"/Users/divya/MyHealthApp/www/caller-list.html",
+		"/Users/divya/MyHealthApp/platforms/ios/build/emulator/MyHealthApp.app/www/DoctorAppointmentpage.html",
+		"/Users/divya/Documents/gittutorial/test.js",
+		"/Users/divya/Desktop/firstprogram.java",
+		"/Users/divya/Desktop/prime.js",
+		"/Users/divya/Desktop/this.js",
+		"/Users/divya/Desktop/oops.js",
+		"/Users/divya/Desktop/try.html",
+		"/Users/divya/Desktop/scopes.js",
+		"/Users/divya/Desktop/closure.js",
+		"/Users/divya/Documents/data structures",
+		"/Users/divya/Documents/class 1 Computer arch and design ",
+		"/Users/divya/Desktop/sorting.js",
+		"/Users/divya/Desktop/test.js",
+		"/Users/divya/Desktop/test.html",
+		"/Users/divya/Documents/tryhtml.html",
+		"/Users/divya/Desktop/sorting",
+		"/Users/divya/Documents/Assignmant1 - computer architecture",
+		"/class 1 _ computer arch"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"*",
+			"*.html",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"div",
+			">\n",
+			"bigfont",
+			"wrapp",
+			"500px",
+			"bigfont",
+			"=[{",
+			"'",
+			"'docName'",
+			"appointments",
+			".item-button",
+			".item-button-right",
+			".ion-button-right",
+			".pull",
+			".pull-left",
+			".padding",
+			"padding",
+			"bar-footer",
+			"footer",
+			"button-assertive",
+			"item-button-right",
+			"icon",
+			"ion-ios-telephone",
+			"icon",
+			"card",
+			"app1",
+			"item-avatar",
+			"label",
+			"Caller",
+			"padding",
+			"subheader",
+			"+",
+			"pane",
+			"AppCtrl",
+			"ionic.bundle.min.js",
+			".js",
+			"stable",
+			"subheader",
+			"<div class=\"wrapper\"> ",
+			"topfix",
+			"bar-header",
+			"subheader",
+			"button",
+			"footer",
+			"text-align: center;",
+			"title",
+			"list ",
+			"list has-header",
+			"list has-header padding",
+			"positive",
+			");\n",
+			"console",
+			"	 ",
+			"purple",
+			"h7"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 25.0
+	},
+	"pinned_build_system": "",
+	"project": "config.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"app.css",
+				"scss/ionic.app.scss"
+			],
+			[
+				"ionic.bundle.js",
+				"www/lib/ionic/js/ionic.bundle.js"
+			],
+			[
+				"lib/ionic/css/ionic.css",
+				"www/lib/ionic/css/ionic.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 172.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

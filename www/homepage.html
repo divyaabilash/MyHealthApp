@@ -1,4 +1,5 @@
 <!Doctype html>
+<html ng-app="app">
 <head>
 <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -16,7 +17,7 @@
 <button class="button icon ion-navicon"></button>
   <h1 class="title">My Health</h1>
 </ion-header-bar>
-<ion-content class="padding">
+<ion-content ng-controller="AppCtrl" class="padding">
    <p class="padding bigfont"> 
         Welcome {{name}}, to My Health.
       </p>

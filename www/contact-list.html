@@ -1,4 +1,5 @@
 <!Doctype html>
+<html ng-app="app">
 <head>
 <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -24,13 +25,17 @@
 <div class="card" >
 <div class="container">
 <div class="list">
-<div class="item item-avatar" ng-repeat="doctor in doc">
-  <div class="item item-button-right">
-   <h4>{{doctor.name}}</h4>
-      <p>{{doctor.phonenumber}}</p> 
-      <button class="button button-positive">
+<div class="item" ng-repeat="doctor in doc">
+<div class="item item-button-right">
+  <div class="row">
+  <div class="col">{{doctor.name}}</div>
+ <div class="col">{{doctor.keyword}}</div></div>
+ <div>{{doctor.phonenumber}}</div>
+   <button class="button button-positive">
             <i class="icon ion-ios-telephone"></i>
             </button>
+            </div>
+             </div>
              </div>
  </div>
  </div>       
