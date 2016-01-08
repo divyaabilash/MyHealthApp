@@ -6,9 +6,16 @@
     <div class="card">
         <div class="container">
             <div class="list">
-                <div class="item item-avatar" ng-repeat="contact in contactInfo">
+                <div class="item" ng-repeat="contact in contactInfo">
                     <div class="item item-button-right">
-                        <h4>{{contact.name}}</h4>
+                        <span class="row">
+                       <span class="col">
+                        <h3>{{contact.name}}</h3>
+                        </span>
+                        <span class="col">
+                        <h3>{{contact.info}}</h3>
+                        </span>
+                        </span>
                         <p>{{contact.phone}}</p>
                         <button class="button button-positive">
                             <i class="icon ion-ios-telephone"></i>
