@@ -1,4 +1,4 @@
-var app = angular.module("app", ['ionic', 'LocalStorageModule', 'app.controllers', 'app.services', 'app.config']);
+var app = angular.module("app", ['ionic','ionic.service.core', 'LocalStorageModule', 'app.controllers', 'app.services', 'app.config']);
 
 app.config(function(localStorageServiceProvider) {
     localStorageServiceProvider

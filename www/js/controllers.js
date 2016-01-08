@@ -41,7 +41,7 @@ angular.module('app.controllers', [])
         $scope.signupCtrl = function(signup) {
          if (signup.name !== "" && signup.phone !== "" && signup.pin !== "" && signup.repin !== "" && signup.pin == signup.repin) {
            // if (signup.phone !== "" && signup.pin !== "" && signup.repin !== "" && signup.pin == signup.repin) {
-                AuthenticationService.SignUp(signup.phone, signup.pin, function(data) {
+                AuthenticationService.Login(signup.phone, signup.pin, function(data) {
                     if (data.error) {
 
                     } else {
