@@ -1,7 +1,6 @@
 
     <ion-header-bar class="bar bar-stable bar-subheader">
-        
-        <h2 class="title"> New Contact </h2>
+          <h2 class="title"> New Contact </h2>
     </ion-header-bar>
     <ion-content class="padding">
         <div class="card">
@@ -20,10 +19,15 @@
                     <input type="text" placeholder="Doctor" ng-model="contact.info">
                 </label>
             </div>
-            <button class="button button-positive" ui-sref="^.list">Cancel</button>
+            <div class="row">
+            <div class="col">
+            <button class="button button-stable button-block" ui-sref="^.list">Cancel</button>
+            </div>
+            <div class="col">
             <button class="button button-positive button-block" ng-click="saveContact(contact)">
                 Save
             </button>
+            </div>
             </form>
         </div>
     </ion-content>
