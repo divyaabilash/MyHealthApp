@@ -123,6 +123,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('presciptions.add', {
             url: '/add',
             templateUrl: 'templates/presciptions-add.html'
+        })
+
+        .state('signup',{
+            url:'/signup',
+            templateUrl:'templates/signup.html',
+            controller:'signupCtrl'
         });
 
     // if none of the above states are matched, use this as the fallback

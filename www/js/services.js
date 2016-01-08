@@ -18,6 +18,17 @@ angular.module('app.services', ['app.config'])
             });
     };
 
+        service.SignUp = function Login(name,username, password, callback) {
+        $http.post(baseUrl + '/api/authenticate', {
+               name:name,
+                username: username,
+                password: password
+            })
+            .success(function(response) {
+                callback(response);
+            });
+    };
+
     return service;
 }])
 

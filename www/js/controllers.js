@@ -1,36 +1,62 @@
 angular.module('app.controllers', [])
 
-.controller('LoginCtrl', ['$rootScope', '$scope', '$state', 'localStorageService', 'AuthenticationService', 
+.controller('LoginCtrl', ['$rootScope', '$scope', '$state', 'localStorageService', 'AuthenticationService',
     function($rootScope, $scope, $state, localStorageService, AuthenticationService) {
 
-    //If user is already logged in take them to dashboard
-    var user = localStorageService.get('user');
+        //If user is already logged in take them to dashboard
+        var user = localStorageService.get('user');
 
-    if (user) {
-        $rootScope.user  = JSON.parse(user);
-        $state.go("dashboard");
-    }
-
-    $scope.loginDo = function(login) {
-        if (login.phone !== '' && login.pin !== '') {
-            // localStorageService.set('uid', 123);
-            // $state.go("dashboard");
-            AuthenticationService.Login(login.phone, login.pin, function(data){
-                if(data.error) {
-
-                } else {
-                    $rootScope.user = data;
-                    localStorageService.set('user', JSON.stringify(data));
-                    $state.go("dashboard");
-                }
-            });
+        if (user) {
+            $rootScope.user = JSON.parse(user);
+            $state.go("dashboard");
         }
-    };
 
-}])
+        $scope.loginDo = function(login) {
+            if (login.phone !== '' && login.pin !== '') {
+                // localStorageService.set('uid', 123);
+                // $state.go("dashboard");
+                AuthenticationService.Login(login.phone, login.pin, function(data) {
+                    if (data.error) {
+
+                    } else {
+                        $rootScope.user = data;
+                        localStorageService.set('user', JSON.stringify(data));
+                        $state.go("dashboard");
+                    }
+                });
+            }
+        };
+
+    }
+])
+
+.controller('signupCtrl', ['$rootScope', '$scope', '$state', 'localStorageService', 'AuthenticationService',
+    function($rootScope, $scope, $state, localStorageService, AuthenticationService) {
+         var user = localStorageService.get('user');
+
+        // if (user) {
+        //     $rootScope.user = JSON.parse(user);
+        //     $state.go("dashboard");
+        // }
+        $scope.signupCtrl = function(signup) {
+         if (signup.name !== "" && signup.phone !== "" && signup.pin !== "" && signup.repin !== "" && signup.pin == signup.repin) {
+           // if (signup.phone !== "" && signup.pin !== "" && signup.repin !== "" && signup.pin == signup.repin) {
+                AuthenticationService.SignUp(signup.phone, signup.pin, function(data) {
+                    if (data.error) {
+
+                    } else {
+                        $rootScope.user = data;
+                        localStorageService.set('user', JSON.stringify(data));
+                        $state.go("dashboard");
+                    }
+                });
+            }
+        };
+    }
+])
 
 .controller('DashCtrl', function($scope) {
-    
+
     // $scope.appointmentInfo = appointmentInfo;
     // $scope.prescriptionInfo = prescriptionInfo;
     // $scope.contactInfo = contactInfo;
