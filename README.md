@@ -6,6 +6,27 @@ Appointment reminders and Contacts to contact their Doctors or Hospitals in case
 This app is developed using Ionic Framework for the UI.
 
 
+#Softwares to be installed for Running this app.
+#Steps:
+
+<b>
+1. sudo npm install -g cordova
+2.sudo npm install -g ionic
+3. ionic platform add ios 
+4. ionic platform add android
+5. ionic build iOS
+6. ionic emulate iOS 
+7. ionic build android
+8.ionic emulate android
+(ionic run android)
+9. ionic serve --lab (to see the app on browser)
+10 npm install -g bower
+11. bower install angular-local-storage --save
+12.sudo npm install -g phonegap
+13. phonegap serve (to run on phone gap developer app)
+</b>
+
+
 #Steps to View the App: 
 
 1.<b>$git clone https://github.com/divyaabilash/MyHealthApp.git</b></br>
