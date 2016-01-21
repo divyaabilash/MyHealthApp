@@ -10,20 +10,20 @@ This app is developed using Ionic Framework for the UI.
 #Steps:
 
 <b>
-1. sudo npm install -g cordova
-2.sudo npm install -g ionic
-3. ionic platform add ios 
-4. ionic platform add android
-5. ionic build iOS
-6. ionic emulate iOS 
-7. ionic build android
-8.ionic emulate android
-(ionic run android)
-9. ionic serve --lab (to see the app on browser)
-10 npm install -g bower
-11. bower install angular-local-storage --save
-12.sudo npm install -g phonegap
-13. phonegap serve (to run on phone gap developer app)
+1. sudo npm install -g cordova</br>
+2.sudo npm install -g ionic</br>
+3. ionic platform add ios </br>
+4. ionic platform add android</br>
+5. ionic build iOS</br>
+6. ionic emulate iOS </br>
+7. ionic build android</br>
+8.ionic emulate android</br>
+(ionic run android)</br>
+9. ionic serve --lab (to see the app on browser)</br>
+10 npm install -g bower</br>
+11. bower install angular-local-storage --save</br>
+12.sudo npm install -g phonegap</br>
+13. phonegap serve (to run on phone gap developer app)</br>
 </b>
 
 
