@@ -10,13 +10,13 @@ This app is developed using Ionic Framework for the UI.
 #Steps:
 
 <b>
-1. sudo npm install -g cordova</br>
-2.sudo npm install -g ionic</br>
-3. ionic platform add ios </br>
-4. ionic platform add android</br>
-5. npm install -g bower</br>
-6. bower install angular-local-storage --save</br>
-7.sudo npm install -g phonegap</br>
+1. sudo npm install -g cordova</b> installing Cordova</br><b>
+2.sudo npm install -g ionic</b> installing Ionic</br><b>
+3. ionic platform add ios </b> installing IOS platform for buliding the App</br><b>
+4. ionic platform add android</b> installing Android platform</br><b>
+5. npm install -g bower</b> installing Bower</br><b>
+6. bower install angular-local-storage --save</b> installing Local Storage factility for the app</br><b>
+7.sudo npm install -g phonegap</b> installing Phonegap for running the app on the phone</br><b>
 </b>
 
 
